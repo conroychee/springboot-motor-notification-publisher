@@ -1,0 +1,34 @@
+spring:
+  kafka:
+    bootstrap-servers: 172.20.153.165:9092
+    consumer:
+      group-id: ws-forwarder
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: org.example.springbootwebsocketkafkamotornotification.*
+        spring.json.value.default.type: org.example.springbootwebsocketkafkamotornotification.model.MotorNotification
+        spring.json.use.type.headers: false
+  application:
+    name: springboot-websocket-kafka-motor-notification
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 30s
+app:
+  kafka:
+    topic: machine.notifications
+  ws:
+    destination: /topic/notifications   # websocket destination clients subscribe to
+
+springdoc:
+  api-docs:
+    path: /docs
+  swagger-ui:
+    path: /swagger
+
+server:
+  port: 8082

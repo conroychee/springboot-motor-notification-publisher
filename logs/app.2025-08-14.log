@@ -1,0 +1,680 @@
+2025-08-14 00:02:05 INFO  [MessageBroker-10] o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 11 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(11)-CONNECTED(11)-DISCONNECT(9)], stompBrokerRelay[null], inboundChannel[pool size = 24, active threads = 0, queued tasks = 0, completed tasks = 192], outboundChannel[pool size = 14, active threads = 0, queued tasks = 0, completed tasks = 42], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 1, completed tasks = 103]
+2025-08-14 00:32:05 INFO  [MessageBroker-9] o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 39 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(39)-CONNECTED(39)-DISCONNECT(22)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 648], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 138], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 2, completed tasks = 511]
+2025-08-14 01:02:05 INFO  [MessageBroker-6] o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 60 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(60)-CONNECTED(60)-DISCONNECT(38)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1011], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 217], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 2, completed tasks = 929]
+2025-08-14 01:07:11 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Revoke previously assigned partitions machine.notifications-0
+2025-08-14 01:07:11 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer - ws-forwarder: partitions revoked: [machine.notifications-0]
+2025-08-14 01:07:11 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Member consumer-ws-forwarder-1-d3c557ec-d3ad-4e95-acd8-e35ad4696c42 sending LeaveGroup request to coordinator 172.20.153.165:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2025-08-14 01:07:11 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-08-14 01:07:11 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Request joining group due to: consumer pro-actively leaving the group
+2025-08-14 01:07:11 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Unsubscribed all topics or patterns and assigned partitions
+2025-08-14 01:07:11 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-08-14 01:07:11 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Request joining group due to: consumer pro-actively leaving the group
+2025-08-14 01:07:12 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-08-14 01:07:12 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-08-14 01:07:12 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-08-14 01:07:12 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-08-14 01:07:12 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-ws-forwarder-1 unregistered
+2025-08-14 01:07:12 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer - ws-forwarder: Consumer stopped
+2025-08-14 01:07:12 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-14 01:07:12 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-14 01:07:12 INFO  [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-08-14 01:07:12 INFO  [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7fac3ce0]]
+2025-08-14 01:07:12 INFO  [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-08-14 01:07:12 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14 01:07:12 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-14 01:07:12 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-14 01:09:49 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-14 01:09:49 INFO  [main] o.e.s.SpringbootWebsocketKafkaMotorNotificationApplication - Starting SpringbootWebsocketKafkaMotorNotificationApplication using Java 24.0.2 with PID 3488 (C:\Users\Conroy\OneDrive\Documents\Projects\java\springboot\springboot-websocket-kafka-motor-notification\target\classes started by Conroy in C:\Users\Conroy\OneDrive\Documents\Projects\java\springboot\springboot-websocket-kafka-motor-notification)
+2025-08-14 01:09:49 INFO  [main] o.e.s.SpringbootWebsocketKafkaMotorNotificationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-14 01:09:50 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-14 01:09:50 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-14 01:09:50 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 97 ms. Found 1 JPA repository interface.
+2025-08-14 01:09:50 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-14 01:09:50 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-14 01:09:50 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.springbootwebsocketkafkamotornotification.repository.MotorRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-14 01:09:50 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-08-14 01:09:50 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-08-14 01:09:50 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2025-08-14 01:09:50 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-14 01:09:50 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-14 01:09:50 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-14 01:09:50 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1017 ms
+2025-08-14 01:09:50 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-14 01:09:50 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-14 01:09:50 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-14 01:09:51 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-14 01:09:51 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-14 01:09:51 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ae958b0
+2025-08-14 01:09:51 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-14 01:09:51 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-14 01:09:51 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-14 01:09:51 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-14 01:09:52 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14 01:09:52 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-14 01:09:52 INFO  [main] o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-08-14 01:09:52 INFO  [main] o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@38911759]]
+2025-08-14 01:09:52 INFO  [main] o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-08-14 01:09:52 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2025-08-14 01:09:52 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2025-08-14 01:09:52 INFO  [main] o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [172.20.153.165:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ws-forwarder-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ws-forwarder
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-08-14 01:09:53 INFO  [main] o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-08-14 01:09:53 INFO  [main] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-08-14 01:09:53 INFO  [main] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-08-14 01:09:53 INFO  [main] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1755104993196
+2025-08-14 01:09:53 INFO  [main] o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Subscribed to topic(s): machine.notifications
+2025-08-14 01:09:53 INFO  [main] o.e.s.SpringbootWebsocketKafkaMotorNotificationApplication - Started SpringbootWebsocketKafkaMotorNotificationApplication in 3.866 seconds (process running for 4.54)
+2025-08-14 01:09:55 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node -1 disconnected.
+2025-08-14 01:09:55 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node -1 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:09:55 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Bootstrap broker 172.20.153.165:9092 (id: -1 rack: null) disconnected
+2025-08-14 01:09:57 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node -1 disconnected.
+2025-08-14 01:09:57 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node -1 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:09:57 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Bootstrap broker 172.20.153.165:9092 (id: -1 rack: null) disconnected
+2025-08-14 01:09:59 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node -1 disconnected.
+2025-08-14 01:09:59 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node -1 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:09:59 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Bootstrap broker 172.20.153.165:9092 (id: -1 rack: null) disconnected
+2025-08-14 01:10:02 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node -1 disconnected.
+2025-08-14 01:10:02 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node -1 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:10:02 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Bootstrap broker 172.20.153.165:9092 (id: -1 rack: null) disconnected
+2025-08-14 01:10:04 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node -1 disconnected.
+2025-08-14 01:10:04 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node -1 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:10:04 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Bootstrap broker 172.20.153.165:9092 (id: -1 rack: null) disconnected
+2025-08-14 01:10:07 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node -1 disconnected.
+2025-08-14 01:10:07 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node -1 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:10:07 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Bootstrap broker 172.20.153.165:9092 (id: -1 rack: null) disconnected
+2025-08-14 01:10:10 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node -1 disconnected.
+2025-08-14 01:10:10 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node -1 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:10:10 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Bootstrap broker 172.20.153.165:9092 (id: -1 rack: null) disconnected
+2025-08-14 01:10:13 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node -1 disconnected.
+2025-08-14 01:10:13 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node -1 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:10:13 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Bootstrap broker 172.20.153.165:9092 (id: -1 rack: null) disconnected
+2025-08-14 01:10:16 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node -1 disconnected.
+2025-08-14 01:10:16 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node -1 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:10:16 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Bootstrap broker 172.20.153.165:9092 (id: -1 rack: null) disconnected
+2025-08-14 01:10:19 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node -1 disconnected.
+2025-08-14 01:10:19 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node -1 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:10:19 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Bootstrap broker 172.20.153.165:9092 (id: -1 rack: null) disconnected
+2025-08-14 01:10:22 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] The metadata response from the cluster reported a recoverable issue with correlation id 6 : {machine.notifications=LEADER_NOT_AVAILABLE}
+2025-08-14 01:10:22 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Cluster ID: bfOblPVzSpaXM6IxALcpxg
+2025-08-14 01:10:22 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Discovered group coordinator 172.20.153.165:9092 (id: 2147483647 rack: null)
+2025-08-14 01:10:22 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] (Re-)joining group
+2025-08-14 01:10:22 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Request joining group due to: need to re-join with the given member-id: consumer-ws-forwarder-1-c1bdc961-7ece-438e-a614-5204972e9ed1
+2025-08-14 01:10:22 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] (Re-)joining group
+2025-08-14 01:10:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Successfully joined group with generation Generation{generationId=1, memberId='consumer-ws-forwarder-1-c1bdc961-7ece-438e-a614-5204972e9ed1', protocol='range'}
+2025-08-14 01:10:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Finished assignment for group at generation 1: {consumer-ws-forwarder-1-c1bdc961-7ece-438e-a614-5204972e9ed1=Assignment(partitions=[machine.notifications-0])}
+2025-08-14 01:10:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Successfully synced group in generation Generation{generationId=1, memberId='consumer-ws-forwarder-1-c1bdc961-7ece-438e-a614-5204972e9ed1', protocol='range'}
+2025-08-14 01:10:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Notifying assignor about the new Assignment(partitions=[machine.notifications-0])
+2025-08-14 01:10:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Adding newly assigned partitions: machine.notifications-0
+2025-08-14 01:10:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Found no committed offset for partition machine.notifications-0
+2025-08-14 01:10:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Resetting offset for partition machine.notifications-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[172.20.153.165:9092 (id: 0 rack: null)], epoch=0}}.
+2025-08-14 01:10:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer - ws-forwarder: partitions assigned: [machine.notifications-0]
+2025-08-14 01:10:40 INFO  [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-14 01:10:40 INFO  [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-14 01:10:40 INFO  [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-14 01:10:52 INFO  [MessageBroker-4] o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 12, active threads = 0, queued tasks = 0, completed tasks = 12], outboundChannel[pool size = 2, active threads = 0, queued tasks = 0, completed tasks = 2], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 3]
+2025-08-14 01:12:03 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Revoke previously assigned partitions machine.notifications-0
+2025-08-14 01:12:03 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer - ws-forwarder: partitions revoked: [machine.notifications-0]
+2025-08-14 01:12:03 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Member consumer-ws-forwarder-1-c1bdc961-7ece-438e-a614-5204972e9ed1 sending LeaveGroup request to coordinator 172.20.153.165:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2025-08-14 01:12:03 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-08-14 01:12:03 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Request joining group due to: consumer pro-actively leaving the group
+2025-08-14 01:12:03 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Unsubscribed all topics or patterns and assigned partitions
+2025-08-14 01:12:03 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-08-14 01:12:03 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Request joining group due to: consumer pro-actively leaving the group
+2025-08-14 01:12:03 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-08-14 01:12:03 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-08-14 01:12:03 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-08-14 01:12:03 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-08-14 01:12:03 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-ws-forwarder-1 unregistered
+2025-08-14 01:12:03 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer - ws-forwarder: Consumer stopped
+2025-08-14 01:12:03 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-14 01:12:03 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-14 01:12:03 INFO  [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-08-14 01:12:03 INFO  [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@38911759]]
+2025-08-14 01:12:03 INFO  [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-08-14 01:12:03 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14 01:12:04 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-14 01:12:04 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-14 01:12:06 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-14 01:12:06 INFO  [main] o.e.s.SpringbootWebsocketKafkaMotorNotificationApplication - Starting SpringbootWebsocketKafkaMotorNotificationApplication using Java 24.0.2 with PID 11304 (C:\Users\Conroy\OneDrive\Documents\Projects\java\springboot\springboot-websocket-kafka-motor-notification\target\classes started by Conroy in C:\Users\Conroy\OneDrive\Documents\Projects\java\springboot\springboot-websocket-kafka-motor-notification)
+2025-08-14 01:12:06 INFO  [main] o.e.s.SpringbootWebsocketKafkaMotorNotificationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-14 01:12:06 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-14 01:12:06 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-14 01:12:06 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 1 JPA repository interface.
+2025-08-14 01:12:07 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-14 01:12:07 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-14 01:12:07 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.springbootwebsocketkafkamotornotification.repository.MotorRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-14 01:12:07 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2025-08-14 01:12:07 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-08-14 01:12:07 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2025-08-14 01:12:07 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-14 01:12:07 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-14 01:12:07 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-14 01:12:07 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1027 ms
+2025-08-14 01:12:07 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-14 01:12:07 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-14 01:12:07 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-14 01:12:07 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-14 01:12:07 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-14 01:12:08 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@43778371
+2025-08-14 01:12:08 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-14 01:12:08 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-14 01:12:08 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-14 01:12:08 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-14 01:12:08 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14 01:12:09 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-14 01:12:09 INFO  [main] o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-08-14 01:12:09 INFO  [main] o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@61ee9672]]
+2025-08-14 01:12:09 INFO  [main] o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-08-14 01:12:09 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2025-08-14 01:12:09 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2025-08-14 01:12:09 INFO  [main] o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [172.20.153.165:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ws-forwarder-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ws-forwarder
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-08-14 01:12:09 INFO  [main] o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-08-14 01:12:09 INFO  [main] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-08-14 01:12:09 INFO  [main] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-08-14 01:12:09 INFO  [main] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1755105129795
+2025-08-14 01:12:09 INFO  [main] o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Subscribed to topic(s): machine.notifications
+2025-08-14 01:12:09 INFO  [main] o.e.s.SpringbootWebsocketKafkaMotorNotificationApplication - Started SpringbootWebsocketKafkaMotorNotificationApplication in 3.734 seconds (process running for 4.67)
+2025-08-14 01:12:10 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Cluster ID: bfOblPVzSpaXM6IxALcpxg
+2025-08-14 01:12:10 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Discovered group coordinator 172.20.153.165:9092 (id: 2147483647 rack: null)
+2025-08-14 01:12:10 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] (Re-)joining group
+2025-08-14 01:12:10 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Request joining group due to: need to re-join with the given member-id: consumer-ws-forwarder-1-cf2eb7ce-b104-4657-b468-8347c93a5015
+2025-08-14 01:12:10 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] (Re-)joining group
+2025-08-14 01:12:10 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Successfully joined group with generation Generation{generationId=3, memberId='consumer-ws-forwarder-1-cf2eb7ce-b104-4657-b468-8347c93a5015', protocol='range'}
+2025-08-14 01:12:10 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Finished assignment for group at generation 3: {consumer-ws-forwarder-1-cf2eb7ce-b104-4657-b468-8347c93a5015=Assignment(partitions=[machine.notifications-0])}
+2025-08-14 01:12:10 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Successfully synced group in generation Generation{generationId=3, memberId='consumer-ws-forwarder-1-cf2eb7ce-b104-4657-b468-8347c93a5015', protocol='range'}
+2025-08-14 01:12:10 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Notifying assignor about the new Assignment(partitions=[machine.notifications-0])
+2025-08-14 01:12:10 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Adding newly assigned partitions: machine.notifications-0
+2025-08-14 01:12:10 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Found no committed offset for partition machine.notifications-0
+2025-08-14 01:12:10 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Resetting offset for partition machine.notifications-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[172.20.153.165:9092 (id: 0 rack: null)], epoch=0}}.
+2025-08-14 01:12:10 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer - ws-forwarder: partitions assigned: [machine.notifications-0]
+2025-08-14 01:12:12 INFO  [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-14 01:12:12 INFO  [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-14 01:12:12 INFO  [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-14 01:13:09 INFO  [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 4 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(4)-CONNECTED(4)-DISCONNECT(1)], stompBrokerRelay[null], inboundChannel[pool size = 24, active threads = 0, queued tasks = 0, completed tasks = 63], outboundChannel[pool size = 13, active threads = 0, queued tasks = 0, completed tasks = 13], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 1, completed tasks = 13]
+2025-08-14 01:15:18 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node 0 disconnected.
+2025-08-14 01:15:18 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Cancelled in-flight FETCH request with correlation id 427 due to node 0 being disconnected (elapsed time since creation: 530ms, elapsed time since send: 530ms, throttle time: 0ms, request timeout: 30000ms)
+2025-08-14 01:15:18 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node -1 disconnected.
+2025-08-14 01:15:18 INFO  [kafka-coordinator-heartbeat-thread | ws-forwarder] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node 2147483647 disconnected.
+2025-08-14 01:15:18 INFO  [kafka-coordinator-heartbeat-thread | ws-forwarder] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Group coordinator 172.20.153.165:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2025-08-14 01:15:18 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.FetchSessionHandler - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Error sending fetch request (sessionId=447142079, epoch=354) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2025-08-14 01:15:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node 0 disconnected.
+2025-08-14 01:15:21 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node 0 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:15:21 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.FetchSessionHandler - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Error sending fetch request (sessionId=447142079, epoch=INITIAL) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2025-08-14 01:15:23 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node 0 disconnected.
+2025-08-14 01:15:23 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node 0 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:15:25 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node 0 disconnected.
+2025-08-14 01:15:25 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node 0 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:15:25 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.FetchSessionHandler - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Error sending fetch request (sessionId=447142079, epoch=INITIAL) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2025-08-14 01:15:28 INFO  [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2025-08-14 01:15:28 WARN  [lettuce-nioEventLoop-4-5] i.l.core.protocol.ConnectionWatchdog - Cannot reconnect to [localhost/<unresolved>:6379]: Connection closed prematurely
+io.lettuce.core.RedisConnectionException: Connection closed prematurely
+	at io.lettuce.core.protocol.RedisHandshakeHandler.channelInactive(RedisHandshakeHandler.java:76)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81)
+	at io.lettuce.core.ChannelGroupListener.channelInactive(ChannelGroupListener.java:54)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1352)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:301)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:850)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:811)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:566)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2025-08-14 01:15:28 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node 0 disconnected.
+2025-08-14 01:15:28 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node 0 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:15:31 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node 0 disconnected.
+2025-08-14 01:15:31 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node 0 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:15:31 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.FetchSessionHandler - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Error sending fetch request (sessionId=447142079, epoch=INITIAL) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2025-08-14 01:15:34 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node 0 disconnected.
+2025-08-14 01:15:34 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node 0 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:15:37 INFO  [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/<unresolved>:6379
+2025-08-14 01:15:37 WARN  [lettuce-nioEventLoop-4-5] i.l.core.protocol.ConnectionWatchdog - Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: getsockopt: localhost/127.0.0.1:6379
+2025-08-14 01:15:37 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node 0 disconnected.
+2025-08-14 01:15:37 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node 0 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:15:40 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node 0 disconnected.
+2025-08-14 01:15:40 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node 0 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:15:40 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.FetchSessionHandler - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Error sending fetch request (sessionId=447142079, epoch=INITIAL) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2025-08-14 01:15:43 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node 0 disconnected.
+2025-08-14 01:15:43 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node 0 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:15:45 INFO  [lettuce-eventExecutorLoop-1-5] i.l.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/<unresolved>:6379
+2025-08-14 01:15:45 WARN  [lettuce-nioEventLoop-4-6] i.l.core.protocol.ConnectionWatchdog - Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: getsockopt: localhost/127.0.0.1:6379
+2025-08-14 01:15:46 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node 0 disconnected.
+2025-08-14 01:15:46 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node 0 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:15:46 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.FetchSessionHandler - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Error sending fetch request (sessionId=447142079, epoch=INITIAL) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2025-08-14 01:15:49 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Node 0 disconnected.
+2025-08-14 01:15:49 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Connection to node 0 (/172.20.153.165:9092) could not be established. Node may not be available.
+2025-08-14 01:15:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Revoke previously assigned partitions machine.notifications-0
+2025-08-14 01:15:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer - ws-forwarder: partitions revoked: [machine.notifications-0]
+2025-08-14 01:15:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-08-14 01:15:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Request joining group due to: consumer pro-actively leaving the group
+2025-08-14 01:15:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Unsubscribed all topics or patterns and assigned partitions
+2025-08-14 01:15:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-08-14 01:15:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Request joining group due to: consumer pro-actively leaving the group
+2025-08-14 01:15:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-08-14 01:15:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-08-14 01:15:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-08-14 01:15:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-08-14 01:15:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-ws-forwarder-1 unregistered
+2025-08-14 01:15:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer - ws-forwarder: Consumer stopped
+2025-08-14 01:15:50 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-14 01:15:50 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-14 01:15:50 INFO  [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-08-14 01:15:50 INFO  [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@61ee9672]]
+2025-08-14 01:15:50 INFO  [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-08-14 01:15:50 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14 01:15:50 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-14 01:15:50 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-14 20:38:28 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-14 20:38:28 INFO  [main] o.e.s.SpringbootWebsocketKafkaMotorNotificationApplication - Starting SpringbootWebsocketKafkaMotorNotificationApplication using Java 24.0.2 with PID 3372 (C:\Users\Conroy\OneDrive\Documents\Projects\java\springboot\springboot-websocket-kafka-motor-notification\target\classes started by Conroy in C:\Users\Conroy\OneDrive\Documents\Projects\java\springboot\springboot-websocket-kafka-motor-notification)
+2025-08-14 20:38:28 INFO  [main] o.e.s.SpringbootWebsocketKafkaMotorNotificationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-14 20:38:29 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-14 20:38:29 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-14 20:38:29 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 142 ms. Found 1 JPA repository interface.
+2025-08-14 20:38:29 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-14 20:38:29 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-14 20:38:29 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.springbootwebsocketkafkamotornotification.repository.MotorRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-14 20:38:29 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-08-14 20:38:29 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-08-14 20:38:29 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2025-08-14 20:38:29 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-14 20:38:29 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-14 20:38:29 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-14 20:38:29 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1299 ms
+2025-08-14 20:38:29 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-14 20:38:30 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-14 20:38:30 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-14 20:38:30 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-14 20:38:30 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-14 20:38:30 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3ec7ad61
+2025-08-14 20:38:30 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-14 20:38:30 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-14 20:38:30 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-14 20:38:31 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-14 20:38:31 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14 20:38:32 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-14 20:38:32 INFO  [main] o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-08-14 20:38:32 INFO  [main] o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4870d2e1]]
+2025-08-14 20:38:32 INFO  [main] o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-08-14 20:38:32 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2025-08-14 20:38:32 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2025-08-14 20:38:32 INFO  [main] o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [172.20.153.165:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ws-forwarder-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ws-forwarder
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-08-14 20:38:32 INFO  [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-14 20:38:32 INFO  [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-14 20:38:32 INFO  [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-08-14 20:38:32 INFO  [main] o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-08-14 20:38:32 INFO  [main] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-08-14 20:38:32 INFO  [main] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-08-14 20:38:32 INFO  [main] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1755175112790
+2025-08-14 20:38:32 INFO  [main] o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Subscribed to topic(s): machine.notifications
+2025-08-14 20:38:32 INFO  [main] o.e.s.SpringbootWebsocketKafkaMotorNotificationApplication - Started SpringbootWebsocketKafkaMotorNotificationApplication in 4.672 seconds (process running for 5.635)
+2025-08-14 20:38:33 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] The metadata response from the cluster reported a recoverable issue with correlation id 2 : {machine.notifications=LEADER_NOT_AVAILABLE}
+2025-08-14 20:38:33 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Cluster ID: jPFm8jjZQwmU9Pod8syovg
+2025-08-14 20:38:33 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] The metadata response from the cluster reported a recoverable issue with correlation id 5 : {machine.notifications=LEADER_NOT_AVAILABLE}
+2025-08-14 20:38:35 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Discovered group coordinator 172.20.153.165:9092 (id: 2147483647 rack: null)
+2025-08-14 20:38:35 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] (Re-)joining group
+2025-08-14 20:38:35 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Request joining group due to: need to re-join with the given member-id: consumer-ws-forwarder-1-c5d92850-6957-4529-90c9-7e586a4b6103
+2025-08-14 20:38:35 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] (Re-)joining group
+2025-08-14 20:38:35 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Successfully joined group with generation Generation{generationId=1, memberId='consumer-ws-forwarder-1-c5d92850-6957-4529-90c9-7e586a4b6103', protocol='range'}
+2025-08-14 20:38:35 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Finished assignment for group at generation 1: {consumer-ws-forwarder-1-c5d92850-6957-4529-90c9-7e586a4b6103=Assignment(partitions=[machine.notifications-0])}
+2025-08-14 20:38:35 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Successfully synced group in generation Generation{generationId=1, memberId='consumer-ws-forwarder-1-c5d92850-6957-4529-90c9-7e586a4b6103', protocol='range'}
+2025-08-14 20:38:35 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Notifying assignor about the new Assignment(partitions=[machine.notifications-0])
+2025-08-14 20:38:35 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Adding newly assigned partitions: machine.notifications-0
+2025-08-14 20:38:35 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Found no committed offset for partition machine.notifications-0
+2025-08-14 20:38:35 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Resetting offset for partition machine.notifications-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[172.20.153.165:9092 (id: 0 rack: null)], epoch=0}}.
+2025-08-14 20:38:35 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer - ws-forwarder: partitions assigned: [machine.notifications-0]
+2025-08-14 20:39:32 INFO  [MessageBroker-3] o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 12, active threads = 0, queued tasks = 0, completed tasks = 12], outboundChannel[pool size = 2, active threads = 0, queued tasks = 0, completed tasks = 2], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 2, completed tasks = 14]
+2025-08-14 21:04:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Revoke previously assigned partitions machine.notifications-0
+2025-08-14 21:04:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer - ws-forwarder: partitions revoked: [machine.notifications-0]
+2025-08-14 21:04:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Member consumer-ws-forwarder-1-c5d92850-6957-4529-90c9-7e586a4b6103 sending LeaveGroup request to coordinator 172.20.153.165:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2025-08-14 21:04:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-08-14 21:04:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Request joining group due to: consumer pro-actively leaving the group
+2025-08-14 21:04:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Unsubscribed all topics or patterns and assigned partitions
+2025-08-14 21:04:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-08-14 21:04:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ws-forwarder-1, groupId=ws-forwarder] Request joining group due to: consumer pro-actively leaving the group
+2025-08-14 21:04:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-08-14 21:04:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-08-14 21:04:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-08-14 21:04:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-08-14 21:04:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-ws-forwarder-1 unregistered
+2025-08-14 21:04:29 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer - ws-forwarder: Consumer stopped
+2025-08-14 21:04:29 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-14 21:04:29 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-14 21:04:29 INFO  [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-08-14 21:04:29 INFO  [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4870d2e1]]
+2025-08-14 21:04:29 INFO  [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-08-14 21:04:29 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14 21:04:29 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-14 21:04:29 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
