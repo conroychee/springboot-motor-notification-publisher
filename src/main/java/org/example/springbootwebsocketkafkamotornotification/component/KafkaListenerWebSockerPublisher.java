@@ -23,17 +23,12 @@ import java.util.Map;
 public class KafkaListenerWebSockerPublisher {
 
     private static final Logger logger = LoggerFactory.getLogger(KafkaListenerWebSockerPublisher.class);
-    @Autowired
-    private RedisCacheService redisCacheService;
-
-    @Autowired
-    private ObjectMapper objectMapper;
-
+    private final RedisCacheService redisCacheService;
+    private final ObjectMapper objectMapper;
     private final SimpMessagingTemplate messagingTemplate;
 
     @Value("${app.ws.destination}")
     private String wsDestination;
-
 
     @KafkaListener(topics = "${app.kafka.topic}")
     public void onMessage(MotorNotification motorNotification) throws JsonProcessingException {
