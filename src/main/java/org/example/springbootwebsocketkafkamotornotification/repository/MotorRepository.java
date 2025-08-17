@@ -7,6 +7,5 @@ import java.time.Instant;
 import java.util.List;
 
 public interface MotorRepository extends JpaRepository<MotorNotification, Long> {
-
     List<MotorNotification> findMotorNotificationsByTimestampBetween(Instant start, Instant end);
 }

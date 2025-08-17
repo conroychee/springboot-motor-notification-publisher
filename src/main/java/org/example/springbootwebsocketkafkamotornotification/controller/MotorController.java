@@ -1,8 +1,15 @@
 package org.example.springbootwebsocketkafkamotornotification.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import lombok.RequiredArgsConstructor;
+import org.example.springbootwebsocketkafkamotornotification.model.DateRequest;
 import org.example.springbootwebsocketkafkamotornotification.model.MotorNotification;
 import org.example.springbootwebsocketkafkamotornotification.repository.MotorRepository;
 import org.example.springbootwebsocketkafkamotornotification.service.MotorNotificationService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,28 +19,29 @@ import java.time.ZoneId;
 import java.util.*;
 import java.util.stream.Collectors;
 
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/api")
 public class MotorController {
 
-    //@Autowired
+    private static final Logger logger = LoggerFactory.getLogger(MotorController.class);
+
     private final MotorNotificationService motorNotificationService;
 
-    public MotorController(MotorNotificationService motorNotificationService) {
-        this.motorNotificationService = motorNotificationService;
-    }
-
+    @Operation(summary = "Request the motor alert daily count",
+            description = "Receive start date time and end date time for querying from postgres"
+            )
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Found"),
+            @ApiResponse(responseCode = "404", description = "Not found")
+    })
     @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/dailyCount")
-    public Map<String, Object> findDailyCount(@RequestBody Map<String, String> dateMap) {
-
-        String startDateTime = dateMap.get("startDateTime");
-        String endDateTime = dateMap.get("endDateTime");
-        Instant start = Instant.parse(startDateTime);
-        Instant end = Instant.parse(endDateTime);
-
-        List<MotorNotification> motorNotifications = motorNotificationService.getMotorNotificationsByRange(start, end);
-        System.out.println("motorNotifications: " + motorNotifications);
+    public Map<String, Object> findDailyCount(@RequestBody DateRequest dateMap) {
+        logger.info("Received the request to get the daily count of motor notifications");
+        logger.info("dateMap: {}", dateMap);
+        List<MotorNotification> motorNotifications = motorNotificationService.getMotorNotificationsByRange(dateMap.getStartDateTime(), dateMap.getEndDateTime());
+        logger.debug("motorNotifications: {}" , motorNotifications);
 
         Map<String, Map<String, Integer>> motorCountMap = new HashMap<>();
         for (MotorNotification motorNotification : motorNotifications) {
@@ -52,15 +60,13 @@ public class MotorController {
                 .distinct()
                 .sorted(Comparator.comparingInt(id -> Integer.parseInt(id.split("-")[1])))
                 .collect(Collectors.toList());
-        System.out.println(motorIds);
+        logger.debug("Motor ids: {}", motorIds);
 
         List<LocalDate> dates = motorNotifications.stream().map(x -> (LocalDate)
                 x.getTimestamp().atZone(ZoneId.of("UTC")).toLocalDate()).distinct().sorted().toList();
 
 
         List<Map<String, Object>> series = new ArrayList<>();
-        System.out.println(motorCountMap);
-        System.out.println(dates);
 
 
         for (String motorId : motorIds) {
@@ -76,16 +82,14 @@ public class MotorController {
             map.put("data", data);
             series.add(map);
         }
-
-        System.out.println("series: " + series);
-        //return motorNotificationService.getMotorNotificationsByRange(start, end);
-
+        logger.info("dates: {}", dates);
+        logger.info("series: {}", series);
 
         Map<String, Object>  result = new HashMap<>();
-
         result.put("categories", dates);
         result.put("series", series);
 
+        logger.info("Daily count {}", result);
         return result;
 
     }

@@ -12,6 +12,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void configureMessageBroker(MessageBrokerRegistry msgBrokerRegistry) {
+        //queue is for the snapshot, topic is for the usual websocket listening to the topic
         msgBrokerRegistry.enableSimpleBroker("/topic", "/queue");
         msgBrokerRegistry.setApplicationDestinationPrefixes("/app");
         msgBrokerRegistry.setUserDestinationPrefix("/client");

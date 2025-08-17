@@ -3,6 +3,8 @@ package org.example.springbootwebsocketkafkamotornotification.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.springbootwebsocketkafkamotornotification.model.MotorNotification;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.Cursor;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -16,6 +18,7 @@ import java.util.*;
 @Service
 public class RedisCacheService {
 
+    private static final Logger log = LoggerFactory.getLogger(RedisCacheService.class);
     private final Jackson2HashMapper mapper = new Jackson2HashMapper(false); // no flatten
     private final RedisTemplate<String, MotorNotification> redisTemplate;
 
@@ -27,22 +30,26 @@ public class RedisCacheService {
     }
 
     public void upsert(MotorNotification m) {
-        System.out.println("hash value ser: {}" + redisTemplate.getHashValueSerializer().getClass());
+        log.info("Hash value serialize: {}", redisTemplate.getHashValueSerializer().getClass());
 
         String key = m.getSensorType().toString() + "-motor:" + m.getMotorId();
         Map<String, Object> map = new HashMap<>();
         map.put("motorId", m.getMotorId());
-        map.put("timestamp", m.getTimestamp());            // Instant serialized as JSON
-        map.put("alertType", m.getAlertType().toString());            // enum/String ok
+        map.put("timestamp", m.getTimestamp());
+        map.put("alertType", m.getAlertType().toString());
         map.put("sensorType", m.getSensorType().toString());
-        map.put("value", m.getValue());                    // Double ok
-
+        map.put("value", m.getValue());
+        log.info("The motor data to be upserted {}", map);
         redisTemplate.opsForHash().putAll(key, map);
-
     }
 
-    public List<Map<Object, Object>> findNotifications(String keyPattern) {
-
+    /**
+     * Find the motor notification in redis that has a certain key pattern
+     * @param keyPattern
+     * @return List of motor notifiications
+     */
+    public Map<String, Object> findNotifications(String keyPattern) {
+        Map<String, Object> motorData = new HashMap<>();
         List<Map<Object, Object>> motorNotifications = new ArrayList<>();
 
         ScanOptions options = ScanOptions.scanOptions().match(keyPattern).build();
@@ -54,7 +61,6 @@ public class RedisCacheService {
                     Map<Object, Object> hashEntries = redisTemplate.opsForHash().entries(key);
                     Instant timestamp = Instant.parse(hashEntries.get("timestamp").toString());
                     hashEntries.put("timestamp", timestamp);
-                    System.out.println(hashEntries);
                     motorNotifications.add(hashEntries);
                 }
             }
@@ -67,42 +73,9 @@ public class RedisCacheService {
                         Comparator.nullsLast(Comparator.naturalOrder()))
                 .reversed());
 
-
-        System.out.println("result" + motorNotifications);
-        return motorNotifications;
+        motorData.put("motorNotifications", motorNotifications);
+        log.info("motor data {}", motorData);
+        return motorData;
     }
-
-//    public List<String> getNotifications(){
-//        Set<String> keys = redisTemplate.opsForSet().members("idx:machine:MTR");
-//        List<String> items = redisTemplate.opsForValue().multiGet(keys);
-//        System.out.println(items);
-//        //return items;
-//        items.stream().forEach(x->{
-//            MachineNotification machineNotification = om.convertValue(x, MachineNotification.class);
-//        });
-//        return items;
-//    }
-
-//    public List<MachineNotification> findByPrefix(String prefix) {
-//        String pattern = prefix.endsWith("*") ? prefix : prefix + "*";
-//
-//        List<String> keys = new ArrayList<>();
-//        ScanOptions scanOptions = ScanOptions.scanOptions().match(pattern).count(1000).build();
-//
-//        try (Cursor<byte[]> cursor = redisTemplate.execute((RedisCallback<Cursor<byte[]>>) conn ->
-//                conn.keyCommands().scan(scanOptions))) {
-//            if (cursor != null) {
-//                while (cursor.hasNext()) {
-//                    keys.add(new String(cursor.next(), java.nio.charset.StandardCharsets.UTF_8));
-//                }
-//            }
-//        } catch (IOException e) {
-//            throw new UncheckedIOException(e);
-//        }
-//
-//        if (keys.isEmpty()) return List.of();
-//        List<Machine> items = redisTemplate.opsForValue().multiGet(keys);
-//        return items == null ? List.of() : items.stream().filter(Objects::nonNull).toList();
-//    }
 
 }

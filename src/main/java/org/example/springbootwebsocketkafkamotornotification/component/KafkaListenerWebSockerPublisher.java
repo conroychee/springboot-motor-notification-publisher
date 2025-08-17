@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.example.springbootwebsocketkafkamotornotification.model.MotorNotification;
 import org.example.springbootwebsocketkafkamotornotification.service.RedisCacheService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -20,6 +22,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class KafkaListenerWebSockerPublisher {
 
+    private static final Logger logger = LoggerFactory.getLogger(KafkaListenerWebSockerPublisher.class);
     @Autowired
     private RedisCacheService redisCacheService;
 
@@ -31,16 +34,15 @@ public class KafkaListenerWebSockerPublisher {
     @Value("${app.ws.destination}")
     private String wsDestination;
 
-    // Consumes raw String; adjust if you need JSON->POJO
+
     @KafkaListener(topics = "${app.kafka.topic}")
     public void onMessage(MotorNotification motorNotification) throws JsonProcessingException {
         // Forward to all WebSocket subscribers
-        System.out.println("Received message: " + motorNotification);
+        logger.info("Received motor notification from kafka: {}", motorNotification);
         redisCacheService.upsert(motorNotification);
-        List<Map<Object, Object>> motorNotifications = redisCacheService.findNotifications("*motor*");
-        Map<String, Object> motorData = new HashMap<>();
-        motorData.put("motorNotifications", motorNotifications);
-        //List<String> machineNotificationList = redisCacheService.getNotifications();
+
+        // after inserting the data to redis, retrieves it out
+        Map<String, Object> motorData = redisCacheService.findNotifications("*motor*");
         messagingTemplate.convertAndSend(wsDestination, motorData);
     }
 

@@ -1,5 +1,7 @@
 package org.example.springbootwebsocketkafkamotornotification.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
@@ -34,14 +36,6 @@ public class MotorNotification {
     @NotNull(message = "Timestamp must be valid")
     @PastOrPresent(message = "Timestamp must be in the past or present")
     private Instant timestamp;
-//
-//    @NotNull(message = "Vibration must be valid")
-//    @DecimalMin(value = "0.0", inclusive = true, message = "Vibration must be >= 0.0")
-//    private Double vibration;
-
-//    @NotNull(message = "Temperature must be valid")
-//    @DecimalMin(value = "-50.0", inclusive = true, message = "Temperature must be >= -50.0")
-//    private Double temperature;
 
     @NotNull(message = "Sensor type must be valid")
     @Enumerated(EnumType.STRING)

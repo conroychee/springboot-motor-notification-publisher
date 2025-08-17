@@ -1,25 +1,16 @@
 package org.example.springbootwebsocketkafkamotornotification.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.example.springbootwebsocketkafkamotornotification.model.MotorNotification;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.redis.connection.Message;
-import org.springframework.data.redis.connection.MessageListener;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.listener.ChannelTopic;
 import org.springframework.data.redis.listener.RedisMessageListenerContainer;
-import org.springframework.data.redis.listener.Topic;
-import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+
 
 @Configuration
 public class RedisConfig {
@@ -40,6 +31,7 @@ public class RedisConfig {
         StringRedisSerializer stringSer = new StringRedisSerializer();
         GenericJackson2JsonRedisSerializer jsonSer = new GenericJackson2JsonRedisSerializer(om);
 
+        //set the serializing manner
         redisTemplate.setKeySerializer(stringSer);
         redisTemplate.setValueSerializer(jsonSer);
         redisTemplate.setHashKeySerializer(stringSer);
@@ -57,36 +49,24 @@ public class RedisConfig {
     }
 
 
-    /*
+    /**
     This is for detecting the del event in redis.
-    I don't want to keep the motor that has already been fixed in the notification table
+    Exclude the motor that has already been fixed in the notification table
      */
     @Bean
     public Object enableKeyEventNotifications(RedisConnectionFactory factory) {
         factory.getConnection()
-                .setConfig("notify-keyspace-events", "Exg"); // or "Eg" if you only want DEL
+                .setConfig("notify-keyspace-events", "Exg"); //
         return new Object();
     }
 
     @Bean
+    /**
+     * The listener to listen to event in redis. This container is mainly used for get the delete event
+     */
     public RedisMessageListenerContainer redisContainer(RedisConnectionFactory connectionFactory) {
         RedisMessageListenerContainer container = new RedisMessageListenerContainer();
         container.setConnectionFactory(connectionFactory);
-
-//        // Plain MessageListener (no adapter)
-//        // Minimal listener: only detects that a DEL event happened
-//        MessageListener listener = (message, pattern) -> {
-//            System.out.println("Redis DEL event detected");
-//            // You can trigger whatever logic you want here
-//        };
-//
-//        // Only listen for delete events from DB 0
-//        container.addMessageListener(
-//                listener,
-//                Collections.singletonList(new ChannelTopic("__keyevent@0__:del"))
-//        );
-
         return container;
     }
-
 }

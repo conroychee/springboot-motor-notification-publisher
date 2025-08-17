@@ -1,29 +1,27 @@
 package org.example.springbootwebsocketkafkamotornotification.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.example.springbootwebsocketkafkamotornotification.service.RedisCacheService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.annotation.SendToUser;
 import org.springframework.stereotype.Controller;
 
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
+@RequiredArgsConstructor
 @Controller
 public class WsInitController {
-    @Autowired
-    private RedisCacheService redisCacheService;
 
+    private static final Logger log = LoggerFactory.getLogger(WsInitController.class);
+
+    private final RedisCacheService redisCacheService;
 
     @MessageMapping("init")
     @SendToUser("/queue/init")
     public Map<String, Object> motorNotifications(){
-
-        List<Map<Object, Object>> motorNotifications = redisCacheService.findNotifications("*motor*");
-        Map<String, Object> motorData = new HashMap<>();
-        motorData.put("motorNotifications", motorNotifications);
-        System.out.println("I have received here to get snapshot");
-        return motorData;
+        log.info("Received the request to retrieve the motor notifications snapshot");
+        return redisCacheService.findNotifications("*motor*");
     }
 }
