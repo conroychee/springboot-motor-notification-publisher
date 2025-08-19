@@ -2,12 +2,11 @@ package org.example.springbootwebsocketkafkamotornotification.service;
 
 import lombok.RequiredArgsConstructor;
 import org.example.springbootwebsocketkafkamotornotification.model.DailyCount;
-import org.example.springbootwebsocketkafkamotornotification.model.DateRequest;
+import org.example.springbootwebsocketkafkamotornotification.model.MotorCountRequest;
 import org.example.springbootwebsocketkafkamotornotification.model.MotorNotification;
 import org.example.springbootwebsocketkafkamotornotification.repository.MotorRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;
@@ -31,14 +30,19 @@ public class MotorNotificationService {
 
     /**
      * Get the daily count
-     * @param dateMap
+     * @param motorReqMap
      * @return Daily count map
      */
-    public Map<String, Object> getDailyCount(DateRequest dateMap) {
-        logger.info("start date: {}", dateMap.getStartDateTime());
-        //logger.info("The found daily count: {}", motorRepository.findDailyCountByTimestampBetween(dateMap.getStartDateTime(), dateMap.getEndDateTime()));
-        List<DailyCount> dailyCountList = motorRepository.findDailyCountByTimestampBetween(dateMap.getStartDateTime(), dateMap.getEndDateTime());
-
+    public Map<String, Object> getDailyCount(MotorCountRequest motorReqMap) {
+        logger.info("start date: {}", motorReqMap.getStartDateTime());
+        //logger.info("The found daily count: {}", motorRepository.findDailyCountByTimestampBetween(motorReqMap.getStartDateTime(), motorReqMap.getEndDateTime()));
+        List<DailyCount> dailyCountList = new ArrayList<>();
+        if(motorReqMap.getMotorList().isEmpty()) {
+            dailyCountList = motorRepository.findDailyCountByTimestampBetween(motorReqMap.getStartDateTime(), motorReqMap.getEndDateTime());
+        }
+        else{
+            dailyCountList = motorRepository.findDailyCountByMotorListAndTimestampBetween(motorReqMap.getStartDateTime(), motorReqMap.getEndDateTime(), motorReqMap.getMotorList());
+        }
         List<String> motorList = dailyCountList.stream()
                 .map(DailyCount::getMotorId)
                 .distinct()
@@ -83,8 +87,8 @@ public class MotorNotificationService {
     Deprecated function
     put here for reference
      */
-    public Map<String, Object> getCountDeprecated(DateRequest dateMap) {
-        List<MotorNotification> motorNotifications = getMotorNotificationsByRange(dateMap.getStartDateTime(), dateMap.getEndDateTime());
+    public Map<String, Object> getCountDeprecated(MotorCountRequest motorReqMap) {
+        List<MotorNotification> motorNotifications = getMotorNotificationsByRange(motorReqMap.getStartDateTime(), motorReqMap.getEndDateTime());
         logger.debug("motorNotifications: {}" , motorNotifications);
                 Map<String, Map<String, Integer>> motorCountMap = new HashMap<>();
         for (MotorNotification motorNotification : motorNotifications) {

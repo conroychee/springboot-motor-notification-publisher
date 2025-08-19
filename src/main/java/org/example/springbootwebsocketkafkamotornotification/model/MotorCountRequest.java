@@ -1,15 +1,14 @@
 package org.example.springbootwebsocketkafkamotornotification.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
 import lombok.Data;
 
 import java.time.Instant;
+import java.util.List;
 
 
 @Data
-public class DateRequest {
+public class MotorCountRequest {
     private Instant startDateTime;
     private Instant endDateTime;
-
+    List<String> motorList;
 }

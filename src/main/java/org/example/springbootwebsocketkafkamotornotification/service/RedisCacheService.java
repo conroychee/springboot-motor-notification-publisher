@@ -41,6 +41,7 @@ public class RedisCacheService {
         map.put("value", m.getValue());
         log.info("The motor data to be upserted {}", map);
         redisTemplate.opsForHash().putAll(key, map);
+        //redisTemplate.expire(key, java.time.Duration.ofMinutes(5)); if want to put expire for a key
     }
 
     /**
